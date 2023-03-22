@@ -1,0 +1,82 @@
+.main-intro{
+    // border: 2px solid red;
+    display: flex;
+    .intro-content{
+        margin: auto;
+        // border: 2px solid green;
+        height: calc(100vh - 30vh);
+        width: 90.5% !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // flex-direction: column;
+        font-family: 'Fira Sans', sans-serif;
+        // padding: 0 2rem ;
+        
+        .intro-info {
+            .heading{
+                // margin: 0 4rem;
+
+                font-size: 3rem;
+                width: 95%;
+                span{
+                    color:#813ef7;
+                }
+                
+            }
+            .sub-heading{
+                // border: 2px solid red;
+                font-size: 1.5rem;
+                margin: 2rem 0;
+                width: fit-content;
+                span{
+                    background-color: #dbc8fb;
+                    padding: 0 0.5rem;  
+                }
+            }
+            .info-button{
+                // border: 2px solid red;
+                width: 18rem;
+                height: 3.5rem;
+                display: flex;
+                button{
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                    font-size: 1.2rem;
+                    font-family: 'Fira Sans', sans-serif;
+                    color: #fff;
+                    background-color: #813ef7;
+                    border: none;
+                    outline: none;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover{
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: 1px solid #813ef7;
+                        color: #813ef7;
+                    }
+                }
+            }
+
+        }
+
+        img{
+            width: 35%;
+            // border: 2px solid red;
+            animation-name: vibration;
+            animation-duration:5s;
+            animation-iteration-count: infinite;
+            transition: all 0.2s ease-in-out;
+
+            @keyframes vibration {
+                0%   {transform: translateY(0px);}
+                25%  {transform: translateY(8px);}
+                50%  {transform: translateY(0px);}
+                75%  {transform: translateY(-8px);}
+                100% {transform: translateY(0px);}
+            }
+        }
+    }
+}

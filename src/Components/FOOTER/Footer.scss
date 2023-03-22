@@ -1,0 +1,19 @@
+.footer{
+    // border: 2px solid red;
+    padding: 1rem 2rem;
+
+    .footer-container{
+        // border: 2px solid green;
+        height: 10vh;
+        display: flex;
+        margin: auto;
+        width: 95%;
+
+        align-items: center;
+        justify-content: center ;
+        // border-top-color: 2px soild #813ef7;
+        border-top: 2px solid #813ef7 ;
+        font-family: 'Fira Sans', sans-serif;
+
+    }
+}
