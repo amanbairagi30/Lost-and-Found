@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MLV from "../NAVBAR/MLV-LOGO.png"
 import { auth, provider } from "../../firebase"
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { useAuthState } from "react-firebase-hooks/auth"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NavBar = () => {
 
@@ -10,10 +12,30 @@ const NavBar = () => {
         signInWithPopup(auth, provider)
             .then(resp => console.log("Signed In"))
             .catch(err => console.log(err))
+        toast.success("Signed in Succesful", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 
-    const logOut = async()=>{
+    const logOut = async () => {
         await signOut(auth)
+        toast.success("Signed Out Succesful", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 
     const [user] = useAuthState(auth);
@@ -37,6 +59,7 @@ const NavBar = () => {
                         </div>
                         : <button onClick={signIn}>Sign In</button>
                     }
+                    <ToastContainer />
                 </div>
             </div>
         </nav>

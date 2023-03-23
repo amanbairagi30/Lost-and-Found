@@ -1,7 +1,28 @@
 import React from 'react'
 import Forget from "../MAIN-INTRO/Forget.svg"
+import { signInWithPopup, signOut } from 'firebase/auth'
+import { auth, provider } from "../../firebase"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Intro = () => {
+    const signIn = () => {
+        signInWithPopup(auth, provider)
+            .then(resp => console.log("Signed In"))
+            .catch(err => console.log(err))
+            toast.success("Signed in Succesful", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+    }
+
     return (
         <main className="main-intro">
             <div className="intro-content">
@@ -11,7 +32,7 @@ const Intro = () => {
                     </div>
                     <p className='sub-heading'>Join our <span>Community Now!</span></p>
                     <div className="info-button">
-                        <button>Get Started</button>
+                        <button onClick={signIn}>Get Started</button>
                     </div>
                 </div>
 

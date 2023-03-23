@@ -1,4 +1,10 @@
-@import "../src/Components/NAVBAR/NavBar.scss";
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Quicksand:wght@600&display=swap');
+@import "../src/Components/NAVBAR/NavBar.scss";
 @import "../src/Components/FOOTER/Footer.scss";
 @import "../src/Components/MAIN-INTRO/Intro.scss";
+@import "../src/Components/MAIN-BOX/MainBox.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+}
