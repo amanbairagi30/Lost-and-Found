@@ -22,10 +22,15 @@
             .product-filters{
                 border-bottom: 1.8px solid #813ef7;
                 // padding: 0 1rem;
-                margin: 0 0 0.5rem 0;
+                margin: 0.5rem 0;
                 height: 7%;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+
+                #first,#second{
+                    border: 2px soilid red;
+                }
             }
             .product-description{
                 // border: 2px solid yellow;
