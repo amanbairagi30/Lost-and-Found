@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// djsa
 const NavBar = () => {
 
     const signIn = () => {
@@ -53,7 +54,7 @@ const NavBar = () => {
                     {user ?
                         <div className="auth-details">
                             {/* <span>{user.displayName}</span> */}
-                            <img src={user.photoURL} alt="" />
+                            <img src={user?.photoURL} alt="" />
 
                             <button onClick={logOut}>Sign Out</button>
                         </div>
