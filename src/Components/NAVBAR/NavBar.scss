@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Quicksand:wght@600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-.navbar{
+
+.navbar {
     // border: 2px solid green;
     padding: 1rem 2rem;
 
-    .nav-content{
+    .nav-content {
         border-bottom: 2px solid #813ef7;
         padding: 0.5rem 0;
         display: flex;
@@ -17,21 +19,23 @@
         margin: auto;
         width: 95%;
 
-        .title{
+        .title {
             font-family: 'Fira Sans', sans-serif;
             font-size: 1.2rem;
         }
-        
-        .logo{
+
+        .logo {
             // border: 2px solid red;
             height: 100%;
             width: 15rem;
             display: flex;
             align-items: center;
-            img{
+
+            img {
                 height: inherit;
             }
-            .heading{
+
+            .heading {
                 padding: 0 1rem;
                 font-size: 0.8rem;
                 // $font1 : 'Fira Sans, sans-serif';
@@ -39,7 +43,8 @@
                 font-family: 'Fira Sans', sans-serif;
             }
         }
-        .auth-btn{
+
+        .auth-btn {
             // border: 2px solid green;
             padding: 0 0.5rem;
             width: 15rem;
@@ -49,7 +54,7 @@
             justify-content: flex-end;
             align-items: center;
 
-            button{
+            button {
                 // margin: auto;
                 width: 5rem;
                 // width: 100%;
@@ -61,17 +66,17 @@
                 outline: none;
                 transition: all 0.2s ease-in-out;
 
-                &:hover{
+                &:hover {
                     cursor: pointer;
                     background-color: transparent;
                     border: 1px solid #813ef7;
                     color: #813ef7;
                 }
-               
+
             }
         }
 
-        .auth-details{
+        .auth-details {
             // border: 2px solid red;
             display: flex;
             width: 100%;
@@ -80,16 +85,77 @@
             justify-content: flex-end;
             gap: 0.5rem;
 
-            img{
-                width: 2rem;
-                border-radius: 50%;
+            .boundary {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                svg {
+                    transition: all 0.1s ease-in-out;
+                    color: #813ef7;
+                    font-weight: bolder;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
+                }
+
+                .drop-down {
+                    position: absolute;
+                    border: 2px solid white;
+                    box-shadow: 1px 2px 12px -3px black;
+                    border-radius: 0.3rem;
+                    right:2%;
+                    top: 127%;
+                    height: 3rem;
+                    width: 6rem;
+                    display: flex;
+                    margin: auto;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    padding: 1rem 0rem;
+                    text-align: center;
+                    font-family: 'Fira Sans', sans-serif;
+
+                    ul {
+                        li {
+                            display: flex;
+                            margin: auto;
+                            // border: 2px solid green;
+                            list-style: none;
+                            margin: 0.51rem 0;
+                            padding: 0.21rem;
+                            // width: 100%;
+                            // border-bottom: 1px solid #813ef7;
+
+                            &:hover {
+                                background-color: #813ef7;
+                                border-radius: 0.2rem;
+                                cursor: pointer;
+                                color: white;
+                            }
+                        }
+                    }
+                }
             }
 
-            span{
+            img {
+                width: 2rem;
+                border-radius: 50%;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            span {
                 font-family: 'Fira Sans', sans-serif;
 
             }
-            button{
+
+            button {
                 width: 5rem;
                 height: 100%;
             }
