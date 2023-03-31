@@ -56,6 +56,20 @@ const NavBar = () => {
         }
     })
 
+    const ToggleDropDown = (item)=>{
+        setOpen(false);
+        if(item === Menus[0]){
+            console.log(Menus[0]);
+        }
+        else if(item === Menus[1]){
+            console.log(Menus[1]);
+            logOut()
+
+        }
+        // console.log(Menus[0]);
+        
+    }
+
     return (
         <nav className="navbar">
             <div className="nav-content">
@@ -69,14 +83,15 @@ const NavBar = () => {
                     {user ?
                         <div className="auth-details">
                             <div ref={menuRef} className="boundary">
-                                <img ref={imgRef} title="Click" onClick={() => setOpen(true)} src={user.photoURL} alt="" />
-                                <BsChevronDown onClick={()=>setOpen(true)} onMouseEnter={()=>setOpen(true)} onMouseLeave={()=>setOpen(false)}/>
+                                <img ref={imgRef} title="Click" onClick={() => setOpen(true)} src={user?.photoURL} alt="" />
+                                <BsChevronDown onClick={()=>setOpen(true)} onMouseEnter={()=>setOpen(true)} />
                                 {open && (
                                     <div className="drop-down">
                                         <ul>
                                             {
                                                 Menus.map((item) => (
-                                                    <li onClick={()=>setOpen(false)} key={item}>{item}</li>
+                                                    // <li onClick={()=>setOpen(true)} key={item}>{item}</li>
+                                                    <li onClick={()=>ToggleDropDown(item)} key={item}>{item}</li>
                                                 ))
                                             }
                                         </ul>

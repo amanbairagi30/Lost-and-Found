@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DropDown from './DropDown'
+import { TbHandClick } from "react-icons/tb"
+import Input from './Input'
+
 const style = {
     height: "2.2rem",
     width: "13rem",
@@ -7,6 +10,18 @@ const style = {
 }
 
 const MainBox = () => {
+    const [tab, setTab] = useState(true);
+    const [header,setHeader] = useState("Lost");
+
+    const ToggleLostHeader = ()=>{
+        setTab(false);
+        setHeader("Lost");
+    }
+    const ToggleFoundHeader = ()=>{
+        setTab(false);
+        setHeader("Found");
+    }
+
     return (
         <main className="main-box">
             <div className="main-content">
@@ -47,11 +62,22 @@ const MainBox = () => {
                     </div>
                 </div>
                 <aside className="action-area">
-                    <div className="action-btn">
-                        Buttons
+                    <div className="action-tabs">
+                        <div className="lost-tab" onClick={()=>ToggleLostHeader()}>
+                            Lost
+                        </div>
+                        <div className="found-tab" onClick={()=>ToggleFoundHeader()}>
+                            Found
+                        </div>
                     </div>
                     <div className="action-inputs">
-                        Inputs
+                        {tab ?
+                            <div className="action-default">
+                                <TbHandClick />
+                                <p> Click on either "Lost" or "Found" to get started</p>
+                            </div>
+                            : <Input header = {header} />
+                        }
                     </div>
                 </aside>
             </div>

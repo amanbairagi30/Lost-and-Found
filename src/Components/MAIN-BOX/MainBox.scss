@@ -9,6 +9,7 @@
         width: 95%;
         height: 90vh;
         display: flex;
+        flex-wrap: wrap;
         padding: 0.5rem 0;
         justify-content: space-evenly;
 
@@ -21,16 +22,36 @@
 
             .product-filters {
                 border-bottom: 1.8px solid #813ef7;
-                // padding: 0 1rem;
+                padding: 0.5rem 0rem;
                 margin: 0.5rem 0;
                 height: 7%;
                 display: flex;
                 align-items: center;
+                font-family: 'Fira Sans', sans-serif;
                 justify-content: space-between;
+
+                .filter-btn {
+                    width: 8rem;
+                    height: 86%;
+                    background-color: #813ef7;
+                    border: 0;
+                    color: white;
+                    font-family: 'Fira Sans', sans-serif;
+
+                    &:hover {
+                        color: #813ef7;
+                        background-color: transparent;
+                        border: 1px solid #813ef7;
+                        cursor: pointer;
+                    }
+
+                }
 
                 #first,
                 #second {
                     border: 2px soilid red;
+
+                    // height: 100%;
                 }
             }
 
@@ -43,6 +64,58 @@
         .action-area {
             border: 1.8px solid #813ef7;
             width: 30%;
+
+            .action-tabs {
+                // border: 2px solid red;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 12% !important;
+                font-family: 'Fira Sans', sans-serif;
+                font-size: 1.2rem;
+
+                .lost-tab,
+                .found-tab {
+                    height: 100%;
+                    // margin: 1rem 0.2rem;
+                    display: flex;
+                    width: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    // border: 2px solid ;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .action-inputs {
+                border: 2px solid red;
+                // margin: 2rem 0;
+                height: 87.5%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .action-default {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    flex-direction: column;
+
+                    svg {
+                        font-size: 15rem;
+                        opacity: 0.2;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-family: 'Fira Sans', sans-serif;
+                        width: 75%;
+                    }
+                }
+            }
         }
     }
 }
