@@ -61,7 +61,7 @@ const MainBox = () => {
                         </button>
                     </div>
                     <div className="product-description">
-                        Desc
+                        Description
                     </div>
                 </div>
                 <aside className="action-area">
