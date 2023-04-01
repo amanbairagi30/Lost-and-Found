@@ -12,14 +12,17 @@ const style = {
 const MainBox = () => {
     const [tab, setTab] = useState(true);
     const [header,setHeader] = useState("Lost");
+    const [index,setIndex] = useState(0);
 
     const ToggleLostHeader = ()=>{
         setTab(false);
         setHeader("Lost");
+        setIndex(1);
     }
     const ToggleFoundHeader = ()=>{
         setTab(false);
         setHeader("Found");
+        setIndex(2);
     }
 
     return (
@@ -63,10 +66,10 @@ const MainBox = () => {
                 </div>
                 <aside className="action-area">
                     <div className="action-tabs">
-                        <div className="lost-tab" onClick={()=>ToggleLostHeader()}>
+                        <div className={`lost-tab ${index === 1 ? "active" : ""}`} onClick={()=>ToggleLostHeader()}>
                             Lost
                         </div>
-                        <div className="found-tab" onClick={()=>ToggleFoundHeader()}>
+                        <div className={`found-tab ${index === 2 ? "active" : ""}`} onClick={()=>ToggleFoundHeader()}>
                             Found
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import MLV from "../NAVBAR/MLV-LOGO.png"
 import { auth, provider } from "../../firebase"
 import { signInWithPopup, signOut } from 'firebase/auth'
@@ -83,7 +83,7 @@ const NavBar = () => {
                     {user ?
                         <div className="auth-details">
                             <div ref={menuRef} className="boundary">
-                                <img ref={imgRef} title="Click" onClick={() => setOpen(true)} src={user?.photoURL} alt="" />
+                                <img ref={imgRef} title="Click" onClick={() => setOpen(true)} src={user.photoURL} alt="" />
                                 <BsChevronDown onClick={()=>setOpen(true)} onMouseEnter={()=>setOpen(true)} />
                                 {open && (
                                     <div className="drop-down">
