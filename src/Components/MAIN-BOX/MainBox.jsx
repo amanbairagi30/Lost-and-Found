@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import DropDown from './DropDown'
 import { TbHandClick } from "react-icons/tb"
 import Input from './Input'
+import ItemInfo from './ItemInfo'
 
 const style = {
     height: "2.2rem",
@@ -61,7 +62,12 @@ const MainBox = () => {
                         </button>
                     </div>
                     <div className="product-description">
-                        Description
+                        <ItemInfo />
+                        <ItemInfo />
+                        <ItemInfo />
+                        <ItemInfo />
+                        <ItemInfo />
+                        <ItemInfo />
                     </div>
                 </div>
                 <aside className="action-area">
