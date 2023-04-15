@@ -1,9 +1,10 @@
 import React from 'react'
 import Forget from "../MAIN-INTRO/Forget.svg"
-import { signInWithPopup, signOut } from 'firebase/auth'
+import { signInWithPopup} from 'firebase/auth'
 import { auth, provider } from "../../firebase"
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 
 const Intro = () => {
@@ -32,7 +33,7 @@ const Intro = () => {
                     </div>
                     <p className='sub-heading'>Join our <span>Community Now!</span></p>
                     <div className="info-button">
-                        <button onClick={signIn}>Get Started</button>
+                        <Link to={"main"}><button onClick={signIn}>Get Started</button></Link>
                     </div>
                 </div>
 

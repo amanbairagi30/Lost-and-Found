@@ -62,6 +62,8 @@
                 font-family: 'Fira Sans', sans-serif;
                 color: #fff;
                 background-color: #813ef7;
+                height: 100%;
+                padding: 0.5rem;
                 border: none;
                 outline: none;
                 transition: all 0.2s ease-in-out;
@@ -126,7 +128,8 @@
                             display: flex;
                             margin: auto;
                             // border: 2px solid green;
-                            list-style: none;
+                            list-style: none !important;
+                            text-decoration: none;
                             margin: 0.51rem 0;
                             padding: 0.21rem;
                             // width: 100%;
@@ -158,6 +161,7 @@
 
             button {
                 width: 5rem;
+                border: 2px solid red;
                 height: 100%;
             }
         }

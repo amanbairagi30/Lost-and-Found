@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BsChevronDown } from "react-icons/bs";
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -45,6 +46,7 @@ const NavBar = () => {
     const Menus = ["My Listings", "Sign Out"]
 
     const [open, setOpen] = useState(false);
+    // const [option,setOption] = useState("");
 
     const menuRef = useRef();
     const imgRef = useRef();
@@ -60,9 +62,11 @@ const NavBar = () => {
         setOpen(false);
         if(item === Menus[0]){
             console.log(Menus[0]);
+            // setOption("Listings")
         }
         else if(item === Menus[1]){
             console.log(Menus[1]);
+            // setOption("SignOut")
             logOut()
 
         }
@@ -91,7 +95,7 @@ const NavBar = () => {
                                             {
                                                 Menus.map((item) => (
                                                     // <li onClick={()=>setOpen(true)} key={item}>{item}</li>
-                                                    <li onClick={()=>ToggleDropDown(item)} key={item}>{item}</li>
+                                                    <Link to={item === Menus[0] ? `/listings` : `/`}><li onClick={()=>ToggleDropDown(item)} key={item}>{item}</li></Link>
                                                 ))
                                             }
                                         </ul>
@@ -102,7 +106,7 @@ const NavBar = () => {
 
                             {/* <button onClick={logOut}>Sign Out</button> */}
                         </div>
-                        : <button onClick={signIn}>Sign In</button>
+                        : <Link to="main"><button onClick={signIn}>Sign In</button></Link>
                     }
                     <ToastContainer />
                 </div>
